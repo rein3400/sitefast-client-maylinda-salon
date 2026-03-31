@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maylinda Salon and Spa — Salon & Spa di Sleman</title>
+    <meta name="description" content="Salon dan Spa Terpercaya di Sleman - Perawatan Rambut & Tubuh">
+    <style>
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#1a1a2e;background:#fff}
+        :root{--p:#db2777;--pd:#be185d;--a:#f9a8d4;--bl:#fdf2f8;--t:#1a1a2e;--m:#6b7280;--r:12px;--s:0 1px 3px rgba(0,0,0,.08);--md:0 4px 16px rgba(0,0,0,.1);--mw:1100px}
+        a{text-decoration:none;color:inherit}
+        .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.06);padding:.75rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+        .nav-brand{font-weight:700;font-size:1.15rem;color:var(--p)}
+        .nav-links{display:flex;gap:1.5rem;list-style:none}
+        .nav-links a{font-size:.9rem;font-weight:500;color:var(--m);transition:color .2s}
+        .nav-links a:hover{color:var(--p)}
+        .nav-cta{background:var(--p);color:#fff;padding:.5rem 1.25rem;border-radius:8px;font-size:.85rem;font-weight:600;transition:background .2s}
+        .nav-cta:hover{background:var(--pd)}
+        .hero{background:linear-gradient(135deg,var(--p) 0%,var(--pd) 100%);color:#fff;padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden}
+        .hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;background:#fff;clip-path:ellipse(55% 100% at 50% 100%)}
+        .hero h1{font-size:2.75rem;font-weight:800;margin-bottom:.75rem;letter-spacing:-.02em}
+        .hero p{font-size:1.15rem;opacity:.92;max-width:560px;margin:0 auto 2rem}
+        .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:10px;font-size:1rem;font-weight:600;transition:all .2s;cursor:pointer;border:none}
+        .btn-booking{background:var(--a);color:#db2777}
+        .btn-booking:hover{transform:translateY(-2px);box-shadow:var(--md)}
+        .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+        .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+        .section{padding:4rem 2rem}
+        .section-alt{background:var(--bl)}
+        .section-inner{max-width:var(--mw);margin:0 auto}
+        .section-header{text-align:center;margin-bottom:3rem}
+        .section-header h2{font-size:2rem;font-weight:700;margin-bottom:.5rem}
+        .section-header p{color:var(--m);font-size:1.05rem;max-width:520px;margin:0 auto}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+        .card{background:#fff;border-radius:var(--r);padding:2rem;box-shadow:var(--s);transition:all .3s;border:1px solid rgba(0,0,0,.04)}
+        .card:hover{transform:translateY(-4px);box-shadow:var(--md)}
+        .icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--p),var(--pd));display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem}
+        .card h3{font-size:1.15rem;margin-bottom:.5rem}
+        .card p{color:var(--m);font-size:.95rem;margin-bottom:1rem}
+        .price{font-weight:700;color:var(--p);font-size:1.05rem}
+        .about{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+        .about h2{font-size:2rem;font-weight:700;margin-bottom:1rem}
+        .about p{color:var(--m);margin-bottom:1rem;font-size:1.05rem}
+        .stats{display:flex;gap:2rem;margin-top:1.5rem}
+        .stat{text-align:center}
+        .stat-n{font-size:1.75rem;font-weight:800;color:var(--p)}
+        .stat-l{font-size:.8rem;color:var(--m);text-transform:uppercase;letter-spacing:.05em}
+        .img{background:var(--bl);border-radius:var(--r);min-height:320px;display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--p)}
+        .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+        .test{background:#fff;border-radius:var(--r);padding:2rem;box-shadow:var(--s);border:1px solid rgba(0,0,0,.04)}
+        .stars{color:var(--a);font-size:1rem;margin-bottom:.75rem;letter-spacing:2px}
+        .test p{font-size:.95rem;color:var(--t);margin-bottom:1rem;font-style:italic;line-height:1.7}
+        .author{display:flex;align-items:center;gap:.75rem}
+        .avatar{width:40px;height:40px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+        .name{font-weight:600;font-size:.9rem}
+        .role{font-size:.8rem;color:var(--m)}
+        .cta{background:linear-gradient(135deg,var(--p) 0%,var(--pd) 100%);color:#fff;padding:4rem 2rem;text-align:center}
+        .cta h2{font-size:2rem;font-weight:700;margin-bottom:.75rem}
+        .cta p{font-size:1.1rem;opacity:.9;max-width:500px;margin:0 auto 2rem}
+        .btn-wa{display:inline-flex;align-items:center;gap:.75rem;background:#25d366;color:#fff;padding:1rem 2.5rem;border-radius:12px;font-size:1.1rem;font-weight:700;transition:all .2s;border:none;cursor:pointer}
+        .btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(37,211,102,.4)}
+        .btn-wa svg{width:24px;height:24px;fill:currentColor}
+        .contact{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+        .ci{display:flex;flex-direction:column;gap:1.5rem}
+        .ci-item{display:flex;gap:1rem;align-items:flex-start}
+        .ci-icon{width:44px;height:44px;border-radius:10px;background:var(--bl);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+        .ci-label{font-weight:600;font-size:.9rem;margin-bottom:.15rem}
+        .ci-value{color:var(--m);font-size:.9rem}
+        .hours{background:var(--bl);border-radius:var(--r);padding:2rem}
+        .hours h3{margin-bottom:1rem;font-size:1.1rem}
+        .hr{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid rgba(0,0,0,.06)}
+        .hr:last-child{border:none}
+        .day{font-weight:500}
+        .time{color:var(--m)}
+        .footer{background:#0f172a;color:rgba(255,255,255,.75);padding:2.5rem 2rem;text-align:center;font-size:.85rem}
+        .footer-brand{color:#fff;font-weight:700;font-size:1rem;margin-bottom:.5rem}
+        @media(max-width:768px){.nav-links{display:none}.hero{padding:3.5rem 1.5rem 3rem}.hero h1{font-size:2rem}.about{grid-template-columns:1fr}.img{min-height:200px;order:-1}.stats{justify-content:center}.contact{grid-template-columns:1fr}.section{padding:3rem 1.25rem}}
+        @media(max-width:360px){.hero h1{font-size:1.6rem}}
+    </style>
+</head>
+<body>
+<nav class="nav">
+    <a href="#" class="nav-brand">Maylinda Salon and Spa</a>
+    <ul class="nav-links">
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <a href="https://wa.me/6287736781195?text=Halo%2C%20saya%20ingin%20bertanya" class="nav-cta">Booking Sekarang</a>
+</nav>
+<header class="hero">
+    <h1>Maylinda Salon and Spa</h1>
+    <p>Salon dan Spa Terpercaya di Sleman - Perawatan Rambut & Tubuh</p>
+    <div class="hero-actions">
+        <a href="https://wa.me/6287736781195?text=Halo%2C%20saya%20ingin%20bertanya" class="btn btn-booking">📅 Booking Sekarang</a>
+        <a href="#layanan" class="btn btn-outline">Lihat Layanan</a>
+    </div>
+</header>
+<section id="layanan" class="section">
+    <div class="section-inner">
+        <div class="section-header"><h2>Layanan Kami</h2><p>Solusi profesional untuk kebutuhan Anda</p></div>
+        <div class="grid">
+            <div class="card"><div class="icon">✂️</div><h3>Potong Rambut</h3><p>Potong rambut wanita & pria.</p><span class="price">Mulai dari Rp 25.000</span></div>
+            <div class="card"><div class="icon">🛁</div><h3>Perawatan Spa</h3><p>Facial, creambath, perawatan kulit.</p><span class="price">Mulai dari Rp 75.000</span></div>
+            <div class="card"><div class="icon">🧖</div><h3>Makeup & Styling</h3><p>Rias pengantin, rias casual.</p><span class="price">Mulai dari Rp 100.000</span></div>
+        </div>
+    </div>
+</section>
+<section id="tentang" class="section section-alt">
+    <div class="section-inner">
+        <div class="about">
+            <div class="about-text">
+                <h2>Tentang Maylinda Salon and Spa</h2>
+                <p>Kami menyediakan layanan salon dan spa profesional di Sleman.</p>
+                <p>Berlokasi di Jl. Rambutan No.125B, Ngringin, Condongcatur, Sleman 55283, kami melayani ratusan pelanggan dengan standar kualitas tertinggi.</p>
+                <div class="stats">
+                    <div class="stat"><div class="stat-n">5+</div><div class="stat-l">Tahun</div></div>
+                    <div class="stat"><div class="stat-n">800+</div><div class="stat-l">Pelanggan</div></div>
+                    <div class="stat"><div class="stat-n">4.9</div><div class="stat-l">Rating</div></div>
+                </div>
+            </div>
+            <div class="img" role="img" aria-label="Maylinda Salon and Spa">🛁</div>
+        </div>
+    </div>
+</section>
+<section id="testimoni" class="section">
+    <div class="section-inner">
+        <div class="section-header"><h2>Apa Kata Pelanggan</h2><p>Kepuasan pelanggan adalah prioritas utama kami</p></div>
+        <div class="test-grid">
+            <div class="test"><div class="stars">★★★★★</div><p>"Salon-nya bersih, nyaman, hasilnya memuaskan."</p><div class="author"><div class="avatar">A</div><div><div class="name">Andi R.</div><div class="role">Pelanggan Setia</div></div></div></div>
+            <div class="test"><div class="stars">★★★★★</div><p>"Spa-nya relaxing, staff ramah."</p><div class="author"><div class="avatar">S</div><div><div class="name">Siti J.</div><div class="role">Pelanggan Baru</div></div></div></div>
+            <div class="test"><div class="stars">★★★★★</div><p>"Sudah langganan 2 tahun, selalu puas!"</p><div class="author"><div class="avatar">D</div><div><div class="name">Dewi M.</div><div class="role">Pelanggan</div></div></div></div>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <h2>Siap Untuk Booking?</h2>
+    <p>Hubungi kami sekarang via WhatsApp untuk jadwal dan informasi lebih lanjut</p>
+    <a href="https://wa.me/6287736781195?text=Halo%2C%20saya%20ingin%20bertanya" class="btn-wa">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat WhatsApp
+    </a>
+</section>
+<section id="kontak" class="section section-alt">
+    <div class="section-inner">
+        <div class="section-header"><h2>Hubungi Kami</h2><p>Kami siap melayani Anda</p></div>
+        <div class="contact">
+            <div class="ci">
+                <div class="ci-item"><div class="ci-icon">📍</div><div><div class="ci-label">Alamat</div><div class="ci-value">Jl. Rambutan No.125B, Ngringin, Condongcatur, Sleman 55283</div></div></div>
+                <div class="ci-item"><div class="ci-icon">📱</div><div><div class="ci-label">WhatsApp</div><div class="ci-value"><a href="https://wa.me/6287736781195?text=Halo%2C%20saya%20ingin%20bertanya">+6287736781195</a></div></div></div>
+            </div>
+            <div class="hours">
+                <h3>🕐 Jam Operasional</h3>
+                <div class="hr"><span class="day">Senin - Jumat</span><span class="time">09:00 - 21:00</span></div>
+                <div class="hr"><span class="day">Sabtu</span><span class="time">09:00 - 18:00</span></div>
+                <div class="hr"><span class="day">Minggu</span><span class="time">10:00 - 16:00</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-brand">Maylinda Salon and Spa</div>
+    <p>&copy; 2026 Maylinda Salon and Spa. All rights reserved.</p>
+</footer>
+</body>
+</html>
